@@ -1,7 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --bg: #f5f5f5;
+  --bg-body: #efefef;
+  --black: #000000;
+  --oxford-blue: #14213d;
+  --orange-web: #fca311;
+  --platinum: #e5e5e5;
+  --white: #ffffff;
+  --text-color: #dadce1;
+  --border-radius: 1rem;
+  --speed: 500ms;
+  --titlefont: "Epilogue", sans-serif;
+  --secondaryfont: "Luckiest Guy", cursive;
+  --bodyfont: "Poppins", sans-serif;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  text-decoration: none;
+}
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bgbody);
@@ -17,28 +35,15 @@ body {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-h1, h2, h3, h4, p, a, button {
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+button {
   font-family: var(--bodyfont);
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 1.5;
-}
-:root {
-  --bg: #f5f5f5;
-  --bg-body: #EFEFEF;
-  --black: #000000;
-  --oxford-blue: #14213d;
-  --orange-web: #fca311;
-  --platinum: #e5e5e5;
-  --white: #ffffff;
-  --text-color: #dadce1;
-  --border-radius: 1rem;
-  --speed: 500ms;
-  --titlefont: 'Epilogue', sans-serif;
-  --secondaryfont: 'Luckiest Guy', cursive;
-  --bodyfont: 'Poppins', sans-serif;
-}
-
-* {
-  text-decoration: none;
 }
