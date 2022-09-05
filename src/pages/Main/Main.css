@@ -1,7 +1,24 @@
-.welcome-container {
+.welcome__container {
   background-color: white;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
+
+.welcome__img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.welcome__h1 {
+  font-size: 3rem;
+}
+
+.welcome__p {
+  white-space: pre-line;
+}
+
 .welcome-img-container {
   text-align: center;
   width: 100%;
@@ -39,5 +56,5 @@ h2.welcome-text {
 @media (min-width: 468px) {
   .img-container > img {
     margin-top: -375px;
-}
+  }
 }

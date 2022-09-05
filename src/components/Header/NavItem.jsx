@@ -7,7 +7,7 @@ export default function NavItem(props) {
   }
 
   return (
-    <li className="nav-item">
+    <li className="nav__link">
       <Link to={props.link} onClick={handleClick}>
         {props.text}
       </Link>

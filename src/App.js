@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
+import { createContext } from "react";
 
 import Header from "./components/Header/Header";
 import Main from "./pages/Main/Main";
@@ -12,7 +13,9 @@ import ParkRules from "./pages/ParkRules/ParkRules";
 import Daycare from "./pages/Daycare/Daycare";
 import Contact from "./pages/Contact/Contact";
 
-function App() {
+export const GraphqlContext = createContext();
+
+export const App = function () {
   return (
     <div className="App">
       <CssBaseline />
@@ -30,6 +33,4 @@ function App() {
       <Footer />
     </div>
   );
-}
-
-export default App;
+};

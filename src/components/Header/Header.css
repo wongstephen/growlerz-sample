@@ -1,35 +1,14 @@
-header {
-  background-color: var(--oxford-blue); 
-}
-header>div{
+.header__div {
   align-items: center;
   display: flex;
   height: 3rem;
   justify-content: flex-start;
   column-gap: 2rem;
-  margin: 0 auto;
-  margin: 0 auto;
+  margin: 3rem auto;
   max-width: 1200px;
   padding: 0 1rem;
   width: 100%;
 }
-.nav-title {
-  font-family: 'Hammersmith One', sans-serif;
-  color: white;
-  text-decoration: none;
-  font-size: 1.25rem;
-}
-svg.pets-icon, svg.pets-icon:active, svg.pets-icon:after{
-  transform: rotate(-15deg);
-  color: var(--text-color)
-}
-svg.pets-icon:hover {
-  transform: rotate(0deg);
-  color: white
-}
-
-@media (min-width: 768px) {
-  #logo {
-    width: 10rem;
-  }
+.header__logo {
+  width: 6rem;
 }

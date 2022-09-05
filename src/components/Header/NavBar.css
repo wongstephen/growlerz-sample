@@ -1,4 +1,4 @@
-.nav-menu {
+.navbar {
   background-color: var(--orange-web);
   font-size: 2rem;
   height: 100%;
@@ -6,6 +6,7 @@
   list-style: none;
   margin: 0;
   overflow-y: hidden;
+  padding-left: 0;
   padding-top: 5rem;
   position: absolute;
   text-align: center;
@@ -13,9 +14,10 @@
   transition: all 0.5s ease;
   width: 100%;
   z-index: 9;
-  padding-left: 0;
 }
-.nav-menu > li > *, .nav-menu > li {
+
+.nav-menu > li > *,
+.nav-menu > li {
   color: white;
   font-weight: 800;
   line-height: 2;
@@ -25,13 +27,13 @@
 
 button.login-btn {
   margin-right: 4rem;
-  top: .5rem
+  top: 0.5rem;
 }
 .menu-action {
   color: white;
   position: absolute;
-  right: .5%;
-  top: .5%;
+  right: 0.5%;
+  top: 0.5%;
   transition: all 1s ease;
   z-index: 10;
 }
@@ -64,34 +66,27 @@ svg.menu-action {
     pointer-events: none;
   }
 
-  ul#navBar {
+  .navbar_large {
     background-color: transparent;
-    box-shadow: none;
     display: flex;
-    justify-content: flex-end;
     margin: 0;
-    min-width: 550px;
-    opacity: 1;
     padding: 0;
-    position: static;
+    position: relative;
+    left: 25%;
     text-transform: uppercase;
-    transform: translateY(0px);
-    transition: none;
-    z-index: 1;
+    gap: 1.5rem;
   }
-  .nav-item, .nav-item>a{
+
+  .nav__link > a {
     align-items: center;
-    color: var(--text-color);
+    color: black;
     display: flex;
-    font-size: .75rem;
-    font-weight: 400;
-    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
     letter-spacing: 1.25px;
-    margin-right: 1rem;
   }
-  .nav-item>a:hover {
-    color: white;
-    transition: 1s;
+  .nav__link > a:hover {
+    color: dimgray;
+    transition: 200ms;
   }
-  
 }

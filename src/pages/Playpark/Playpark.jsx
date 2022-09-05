@@ -27,7 +27,7 @@ export default function Playpark() {
   };
 
   useEffect(() => {
-    getWeather();
+    // getWeather();
   }, []);
 
   return (

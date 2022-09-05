@@ -6,7 +6,7 @@ import Welcome from "./Welcome";
 import taproomImg from "../../assets/taproom.jpg";
 import foodtruckImg from "../../assets/foodtruck.jpg";
 import dogWashImg from "../../assets/benjamin-lehman-k8xJOnA3zYM-unsplash.jpg";
-
+import("./Main.css");
 export default function Main() {
   const data = [
     {

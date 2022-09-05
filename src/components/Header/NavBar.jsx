@@ -18,14 +18,18 @@ export default function Navigation() {
         onClick={() => setMenuOpen(false)}
         style={{ display: menuOpen ? "inline-block" : "none" }}
       />
-      <ul className={`nav-menu ${menuOpen ? "open" : "closed"}`} id="navBar">
+      <ul
+        className={`navbar ${menuOpen ? "open" : "closed"} 
+        navbar
+        navbar_large`}
+      >
         <NavItem text="Home" event={setMenuOpen} link={"/"} />
         <NavItem text="Play Park" event={setMenuOpen} link={"/playpark"} />
         <NavItem text="Day Care" event={setMenuOpen} link={"/daycare"} />
         <NavItem text="Events" event={setMenuOpen} link={"/events"} />
         <NavItem text="FAQ" event={setMenuOpen} link={"/faq"} />
         <NavItem text="Contact" event={setMenuOpen} link={"/contact"} />
-        <li className="nav-item">
+        <li className="nav__link">
           <a
             href="https://growlerz.gingrapp.com/front_end/login/email"
             rel="noreferrer"

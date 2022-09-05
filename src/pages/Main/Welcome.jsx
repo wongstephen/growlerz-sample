@@ -1,29 +1,76 @@
-import React from "react";
-import "./Welcome.css";
-import welcomeImg from "../../assets/welcome.jpg";
-import Hours from "../../components/Hours/Hours";
-import PageTitle from "../../components/PageTitle/PageTitle";
-import { padding } from "@mui/system";
-import logo from "../../assets/highreslogo.webp";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { gql, GraphQLClient } from "graphql-request";
+
+const graphCms = new GraphQLClient(process.env.REACT_APP_GRAPHQL_URL, {
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${process.env.REACT_APP_GRAPHQL}`,
+  },
+});
 
 export default function Welcome() {
+  const [loading, setLoading] = useState(true);
+  const [hours, setHours] = useState([]);
+
+  useEffect(
+    () =>
+      async function () {
+        try {
+          const { storeHours } = await graphCms.request(gql`
+            query {
+              storeHours {
+                title
+                open
+                close
+              }
+            }
+          `);
+          setHours(storeHours);
+          setLoading(false);
+        } catch (err) {
+          console.log(err);
+        }
+      },
+    []
+  );
+
   return (
-    <div className="welcome-container">
-      <div className="welcome-img-container">
-        <img src={logo} alt="Growlers Seattle Logo" id="logo" />
-      </div>
-      {/* <PageTitle title="Growlerz" subtitle="Seattle" /> */}
-      <h2 className="welcome-text">
-        DOGS. BEER. COMMUNITY. <br /> COLUMBIA CITY NEIGHBORHOOD | SEATTLE
-      </h2>
-      <div className="img-container">
+    <div className="welcome__container">
+      <div>
         <img
-          src={welcomeImg}
-          alt="Growlers Play Park Welcome"
-          className="welcome-img"
+          className="welcome__img"
+          src={require("../../assets/fatcorgi.png")}
+          alt="dog hero"
         />
       </div>
-      <Hours cName="mobile-hours" />
+      <div>
+        <h1 className="welcome__h1">Growlerz Seattle</h1>
+        <h2 className="welcome__h2">
+          DOGS. BEER. COMMUNITY. <br /> COLUMBIA CITY NEIGHBORHOOD | SEATTLE
+        </h2>
+        <div>
+          {loading ? (
+            <p>Loading</p>
+          ) : (
+            <>
+              <p>
+                <strong>Daycare Hours</strong>
+                <br />
+                Mon - Fri: {hours[0].open} - {hours[0].close}
+              </p>
+              <p>
+                <strong>Play Park Hours</strong>
+                <br />
+                Mon - Fri: {hours[0].open} - {hours[0].close}
+                <br />
+                Sat: {hours[1].open} - {hours[1].close} & Sun: {hours[2].open} -
+                {hours[2].close}
+              </p>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

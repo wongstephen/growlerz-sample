@@ -25,7 +25,7 @@ export default function Price({
         <span className="currency">$</span>
         {dog2}
         <span className="price-card tag">{dog2s}</span>{" "}
-        <p className="price-card disclaimer">*Of the same family</p>
+        <span className="price-card disclaimer">*Of the same family</span>
       </p>
       {btntext !== "" && (
         <Button className="price-card" variant="outlined">
