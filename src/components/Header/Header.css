@@ -2,13 +2,13 @@
   align-items: center;
   display: flex;
   height: 3rem;
-  justify-content: flex-start;
+  justify-content: space-between;
   column-gap: 2rem;
-  margin: 3rem auto;
+  margin: 5rem auto;
   max-width: 1200px;
   padding: 0 1rem;
   width: 100%;
 }
 .header__logo {
-  width: 6rem;
+  width: clamp(2rem, 25vw, 10rem);
 }

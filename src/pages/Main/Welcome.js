@@ -50,9 +50,7 @@ export default function Welcome() {
           DOGS. BEER. COMMUNITY. <br /> COLUMBIA CITY NEIGHBORHOOD | SEATTLE
         </h2>
         <div>
-          {loading ? (
-            <p>Loading</p>
-          ) : (
+          {loading ? null : (
             <>
               <p>
                 <strong>Daycare Hours</strong>

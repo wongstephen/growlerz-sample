@@ -30,21 +30,21 @@ button.login-btn {
   top: 0.5rem;
 }
 .menu-action {
-  color: white;
+  color: black;
   position: absolute;
-  right: 0.5%;
-  top: 0.5%;
+  right: 1rem;
+  top: 3rem;
   transition: all 1s ease;
   z-index: 10;
 }
 
-.nav-menu.open {
+.open {
   opacity: 1;
   transition: all 0.5s ease;
   transform: translateY(0px);
 }
 
-.nav-menu.closed {
+.closed {
   opacity: 0;
   transition: all 0.5s ease;
   transform: translateY(-550px);
@@ -65,6 +65,11 @@ svg.menu-action {
     opacity: 0;
     pointer-events: none;
   }
+  .closed {
+    opacity: 1;
+    transition: all 0.5s ease;
+    transform: translateY(0px);
+  }
 
   .navbar_large {
     background-color: transparent;
@@ -72,9 +77,9 @@ svg.menu-action {
     margin: 0;
     padding: 0;
     position: relative;
-    left: 25%;
     text-transform: uppercase;
     gap: 1.5rem;
+    transform: translateY(0px);
   }
 
   .nav__link > a {

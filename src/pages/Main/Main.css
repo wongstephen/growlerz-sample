@@ -2,8 +2,10 @@
   background-color: white;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .welcome__img {
@@ -19,9 +21,8 @@
   white-space: pre-line;
 }
 
-.welcome-img-container {
-  text-align: center;
-  width: 100%;
+.welcome__img {
+  margin: 0 auto;
 }
 #logo {
   width: 10rem;

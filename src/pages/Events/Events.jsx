@@ -3,6 +3,7 @@ import placeholderImg from "../../assets/trivia.jpeg";
 import { gql, GraphQLClient } from "graphql-request";
 import React, { useEffect, useState } from "react";
 import "./Events.css";
+import throbber from "../../assets/3-dots-fade-white-36.svg";
 
 export default function Events() {
   const [events, setEvents] = useState([]);
@@ -41,26 +42,22 @@ export default function Events() {
     try {
       const { posts } = await graphCms.request(query);
       await setEvents(posts);
-      // setLoading(false);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    // getFetch();
+    getFetch();
   }, []);
-
-  // useEffect(() => {
-  //   console.log(events);
-  // }, [events]);
 
   return (
     <div className="page-container">
       <PageTitle title="Growlers" subtitle="events" />
       {loading ? (
         <img
-          src={require("../../assets/3-dots-fade-white-36.svg")}
+          src={throbber}
           alt="loading"
           style={{
             margin: "0 auto",
