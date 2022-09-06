@@ -16,13 +16,13 @@
   z-index: 9;
 }
 
-.nav-menu > li > *,
-.nav-menu > li {
+/* .nav-menu > li > *, */
+.nav__link > a {
   color: white;
-  font-weight: 800;
-  line-height: 2;
+  font-weight: 600;
+  line-height: 2.5;
   text-decoration: none;
-  text-shadow: 1px 1px 1px black;
+  /* text-shadow: 1px 1px 1px black; */
 }
 
 button.login-btn {
